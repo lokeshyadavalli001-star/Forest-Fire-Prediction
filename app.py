@@ -24,9 +24,9 @@ if st.button("Predict Fire Risk"):
   prediction = model.predict([input_data])[0]
   probability = model.predict_proba([input_data])[0][1]
   if probability < 0.3:
-    st.success("LOW RISK")
+    st.success("🌿 LOW RISK")
   elif probability < 0.7:
-    st.warning("MODERATE RISK")
+    st.warning("🔶 MODERATE RISK")
   else:
-    st.error("HIGH RISK")
+    st.error("🔥 HIGH RISK")
   st.write("Fire Probability:", round(probability * 100, 2), "%")
