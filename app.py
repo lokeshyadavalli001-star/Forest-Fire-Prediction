@@ -3,6 +3,11 @@ import joblib
 import numpy as np
 
 model=joblib.load("forest_fire_model.pkl")
+st.set_page_config(
+    page_title="Forest Fire Risk Prediction System",
+    page_icon="🔥",
+    layout="centered"
+)
 st.title("🔥 Forest Fire Risk Prediction System")
 st.write("Enter environmental conditions to predict wildfire risk")
 
